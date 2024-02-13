@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        .content .top .logo-details{
+            color: #fff;
+            font-size: 30px;
+        }
+        .content .top .media-icons{
+           display: flex;
+        }
+        .content .top .media-icons a{
+            height:40px ;
+            width: 40px;
+            background-color: black;
+            margin: 0 8px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            color: #fff;
+            font-size: 17px;
+            text-decoration: none;
+            transition: all 0.4 ease;
+        }
+        .top .media-icons a:nth-child(1){
+            background-color:#4267b2 ; 
+        }
+        .top .media-icons a:nth-child(1):hover{
+            color:#4267B2 ;
+            background-color:#fff ; 
+        }
+        .top .media-icons a:nth-child(2){
+            background-color:#1DA1F2 ; 
+        }
+        .top .media-icons a:nth-child(2):hover{
+            color:#1DA1F2 ;
+            background-color:#fff ; 
+        }
+        .top .media-icons a:nth-child(3){
+            background-color:#E1306C ; 
+        }
+        .top .media-icons a:nth-child(3):hover{
+            color:#E1306C ;
+            background-color:#fff ; 
+        }
+        .top .media-icons a:nth-child(4){
+            background-color:#FF0000 ; 
+        }
+        .top .media-icons a:nth-child(4):hover{
+            color:#FF0000 ;
+            background-color:#fff ; 
+        }
+        .top .media-icons a:nth-child(5){
+            background-color:#0077B5 ; 
+        }
+        .top .media-icons a:nth-child(5):hover{
+            color:#0077B5 ;
+            background-color:#fff ; 
+        }
+        
+        
+
+
+
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        footer {
+            background-color: black;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+         
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 100px;
+            height: 1px;
+            width: 100%;
+            background-color: #AFAFB6;
+        }
+
+        footer .content {
+            background-color: black;
+            max-width: 1250px;
+            margin: auto;
+            padding: 30px 40px 40px 40px;
+        }
+
+        footer .content .top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        footer .content .link-boxes {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        footer .content .link-boxes .box {
+            width: calc(100% / 5 - 10px);
+            background-color: black;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .content .link-boxes .box .link_name {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .link-boxes .box .link_name::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            height: 2px;
+            width: 35px;
+            background-color: #fff;
+        }
+
+        .content .link-boxes .box li {
+            margin: 6px 0;
+            list-style: none;
+        }
+
+        .content .link-boxes .box li a {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 400;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all 0.4s ease;
+        }
+
+        .content .link-boxes .box li a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .content .link-boxes .input-box {
+            margin-right: 55px;
+        }
+
+        .link-boxes .input-box input {
+            height: 40px;
+            width: calc(100% + 55px);
+            outline: none;
+            border: 2px solid #AFAFB6;
+            background-color: #140B5C;
+            border-radius: 4px;
+            padding:0 15px;
+            font-size: 15px;
+            color: #fff;
+            margin-top: 5px;
+        }
+        .link-boxes .input-box input::placeholder{
+            color: #AFAFB6;
+            font-size: 16px;
+        }
+        .link-boxes .input-box input[type="button"]{
+            background-color: #fff;
+            color: #140B5C;
+            border: none;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 4px 0;
+            opacity:0.8;
+            cursor: pointer;
+            transition: all 0.4 ease;
+        }
+        .input-box input[type="button"]:hover{
+            opacity: 1;   
+        }
+        footer .bottom-details{
+            width:100%;
+            background-color: black;
+        }
+        footer .bottom-details .bottom_text{
+            max-width: 1250px;
+            margin: auto;
+            padding: 20px 40px ;
+            display: flex;
+            justify-content: space-between;
+        }
+        .bottom-details .bottom_text span,
+        .bottom-details .bottom_text a{
+            font-size: 14px;
+            font-weight: 300;
+            color: #fff;
+            opacity: 0.8;
+            text-decoration: none;
+        }
+        .bottom-details .bottom_text a:hover{
+            opacity: 1;
+            text-decoration: underline;
+        }
+        .bottom-details .bottom_text a{
+            margin-right: 10px;  
+        }
+        @media (max-width:900px){
+            footer{
+                position: relative;
+            }
+            .content .top .media-icons a{
+                font-size: 26px;
+            }
+            .content .top .media-icons a{
+                height: 35px;
+                width: 35px;
+                font-size: 14px;
+                line-height: 35px;
+            }
+            footer .content .link-boxes{
+                flex-wrap: wrap;
+             }
+            }
+             footer .content .link-boxes .input-box{
+                   width: 40%;
+                   margin-top: 10px;
+             }
+        @media (max-width:700px){
+            .content .top .logo-details{
+                font-size:26px;
+            }
+            .content .top .media-icons a{
+                height:35px;
+                width: 35px;
+                font-size: 14px;
+                line-height: 35px;
+            }
+            footer .content .link-boxes .box{
+                width: calc(100% / 3 - 10px);
+            }
+            footer .content .link-boxes .input-box{
+                width: 60%;
+            }
+            .bottom-details .bottom_text span,
+            .bottom-details .bottom_text a{
+                font-size: 14px;  
+            }
+            }
+            @media (max-width:520px){
+                footer ::before{
+                    top: 145px;
+                }
+                footer .content .top{
+                    flex-direction: column;
+                }
+                .content .top .media-icons{
+                    margin-top: 16px;
+                }
+                footer .content .link-boxes .box{
+                    width: calc(100% / 2 - 10px);
+                }
+                footer .content .link-boxes .input-box{
+                    width: 100%;
+                }
+
+            }
+            @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+            }
+      
+    
+           
+    
+            .contactus {
+                position: relative;
+                padding: 40px;
+            }
+    
+            .contactus .titre {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2em;
+                color:black;
+                font-weight: 500;
+            }
+    
+            .mbox {
+                display: grid;
+                grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+                grid-template-rows: 5fr;
+                grid-template-areas: "form map"; /* Grid areas for form and map */
+                grid-gap: 20px;
+                margin-top: 20px;
+            }
+    
+            .contact {
+                padding: 40px;
+                background-color: #fff;
+                box-shadow: 0 5px 35px black;
+            }
+    
+            form {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            .inputmbox {
+                display: table-cell;
+                padding: 10px;
+            }
+    
+            .inputmbox span {
+                display: block;
+                margin-bottom: 5px;
+            }
+    
+            .inputmbox input,
+            .inputmbox textarea {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+            }
+    
+            .inputmbox textarea {
+                resize: vertical;
+            }
+    
+            .inputmbox input[type="submit"] {
+                background-color: #4CAF50;
+                color: white;
+                cursor: pointer;
+            }
+            .contacteznous {
+        
+                width: 100%;
+                border: solid gray;
+            }
+            .gallery {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 20px;
+                justify-content: center;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            
+            .image-container {
+                text-align: center;
+                border: 1px solid #808080;
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+            
+            }
+            .image-container img {
+                width: 100%; /* Ajustez la largeur de l'image pour qu'elle occupe 100% de la largeur de son conteneur */
+                height: auto; /* Pour maintenir le ratio de l'image */
+            }
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+              
+    
+            }
+    
+            header {
+                background-color: black;
+                color: white;
+                padding: 10px 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            }
+            .logo-details {
+                display: flex;
+                align-items: center;
+                color: #fff;
+                font-size: 20px;
+            }
+    
+            nav {
+                display: flex;
+                position: fixed;
+                align-items: center;
+                background-color: black;
+            }
+            .container{
+                display: flex;
+            }
+    
+            .menu {
+                list-style: none;
+                display: flex;
+                margin: 0;
+                padding: 0;
+                justify-content: center;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            .logo_name{
+               margin-right: 20px;
+            }
+            .menu-and-search {
+                display: flex;
+                align-items: center;
+            }
+            .menu li {
+                margin-right: 60px;
+            }
+          
+    
+            .menu a {
+                text-decoration: none;
+                position: relative;
+                color: white;
+                transition: color 0.3s, font-size 0.3s;
+                font-size: 16px;
+            }
+            .menu a:hover {
+                color: #c1eb91ad;
+                text-decoration: underline;
+                opacity: 1;
+            }
+    
+            .search {
+                display: flex;
+                margin-left: auto;
+                align-items: center;
+            }
+        
+            
+            .cart-icon,
+            .menu-icon,
+            .heart-icon {
+                font-size: 18px;
+                color: white;
+                margin-left: 20px; /* Ajout de marge à droite entre les icônes */
+                cursor: pointer;
+                transition: color 0.3s, font-size 0.3s;
+                }
+                
+                .cart-icon:hover,
+                .menu-icon:hover {
+                    color: #c1eb91ad; /* Couleur de survol */
+                    font-size:18px; /* Taille de la police lors du survol */
+                }
+                .search-form {
+                    position: relative;
+                    color: black;
+                }
+                .search-form:hover{
+                    color:black;
+                    font-size:18px;
+                }
+                #search-box {
+                    width: 300px; /* Ajustez la largeur selon vos besoins */
+                    padding: 10px;
+                    border: none;
+                    border-radius: 5px;
+                    outline: none;
+                }
+                label[for="search-box"] {
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+                }
+                .cart-heart-icons {
+                    display: flex;
+                    align-items: center;
+                    margin-left: auto;
+                }
+               
+            nav ul{
+                padding: 0px;
+                margin: 0px;
+                list-style-type: none;
+                background-color: black;
+            }
+            nav li{
+                display: inline-block;
+                margin: 0px;
+                padding: 0px;
+                width: 100px;
+                height: 40px;
+                border-right: 1px solid #CCCCCC;
+                text-align: center;
+                line-height: 40px;
+                font-family: sans-serif;
+            }
+            nav li a{
+                display: block;
+                text-decoration: none;
+                color: #FFFFFF;
+            }
+            .gallery2 {
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .image-container {
+                text-align: center;
+                border: 1px solid rgb(204, 204, 204);
+                position: relative;
+                overflow: hidden;
+                ;
+            }
+            
+            img {
+                max-width: 100%;
+                height: auto;
+                transition: opacity 0.5s ease;
+            }
+            .hover-image1 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0; 
+        
+    
+            }
+            .gallery:hover .hover-image1{
+               opacity: 0;
+            }        
+            .image-container:hover .hover-image1 {
+                opacity: 1; 
+            }
+            .gallery:hover .hover-image2{
+                opacity: 0;
+             }        
+             .image-container:hover .hover-image2{
+                 opacity: 1; 
+             }
+             .gallery:hover .hover-image3{
+                opacity: 0;
+             }        
+             .image-container:hover .hover-image3 {
+                 opacity: 1; 
+             }
+             .gallery:hover .hover-image4{
+                opacity: 0;
+                
+             }        
+             .image-container:hover .hover-image4 {
+                 opacity: 1; 
+             }
+            .hover-image2 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0; 
+            }
+            
+            .image-container:hover .hover-image2 {
+                opacity: 1; 
+            }
+            .hover-image3 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+            }
+            
+            .image-container:hover .hover-image3 {
+                opacity: 1; 
+            }
+            .hover-image4 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0; 
+            }
+            
+            .image-container:hover .hover-image4 {
+                opacity: 1; 
+            }
+            .réduction2{
+                position: absolute;
+                top: -3px;
+                left: 20px;
+                background-color: red;
+                color: white;
+              
+                width: 60px;
+                text-align: center;
+            }
+            .overlay {
+                position: absolute;
+                left: 0;
+                bottom: 100px;
+                width: 100%;
+                background: black; /* Black background with 70% opacity */
+                color: white;
+                height: 50px;
+                text-align: center;
+                box-sizing: border-box;
+                justify-content: center;
+                opacity: 0; /* Hidden by default */
+                transition: opacity 0.5s ease;
+            }
+            
+            .image-container:hover .overlay {
+                opacity: 0.8; /* Show the overlay on hover */
+            }
+            #c{
+                color:gray;
+                font-size: 12px;
+                display: inline-block;
+               
+            
+            }
+            #prix{
+                font-size: 14px;
+                color: red;
+                text-align: center;
+                display: inline-block;
+    
+            }
+            a{
+                text-decoration: none; 
+               }
+               #testimonials{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+               }
+               .test{
+                letter-spacing: 1px;
+                margin: 30px 0px;
+                padding: 10px 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+               }
+               .test h2{
+                font-size: 2.2rem;
+                font-weight: 500;;
+                color:rgb(30, 30, 30);
+                padding: 10px 20px;
+               }
+              
+               .box-conta{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 100%;
+               }
+               .boxx{
+                width: 700px;
+                box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+                border: solid 1px rgb(200, 200, 200);
+                background-color: #ffffff;
+                padding: 20px;
+                margin: 15px;
+                cursor: pointer;
+               }
+               .profil-img{
+                 width: 50px;
+                 height: 50px;
+                 border-radius: 50%;
+                 overflow: hidden;
+                 margin-right: 10px;
+               }
+               .profil-img img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+               }
+               .profil{
+                display: flex;
+                align-items: center;
+               }
+               .name-user{
+                display: flex;
+                flex-direction: column;
+               }
+               .name-user strong{
+                color: #3d3d3d;
+                font-size: 1.1rem;
+                letter-spacing: 0.5px;
+               }
+             
+               .reviews{
+                color: #af9b2d;
+               }
+               .box-top{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+               }
+               .client-comment p{
+                font-size: 0.9rem;
+                color: #4b4b4b;
+               }
+               .boxx:hover{
+                transform: translateY(-10px);
+                transition: all ease 0.3s;
+               }
+               @media(max-width:1060px){
+                .box-conta{
+                    width: 45%;
+                    padding:10px;
+        
+                }
+               }
+               @media(max-width:790px){
+                .box-conta{
+                    width: 100%;
+                }
+               }
+               @media(max-width:340px){
+                .box-top{
+                    flex-wrap:wrap;
+                    margin-bottom: 10px;
+                }
+                .reviews{
+                    margin-top: 10px;
+                }
+               }
+               ::selection{
+                color: #ffffff;
+                background-color:#252525 ;
+               }
+    </style>
+</head>
+<body>
+    <header>
+          
+        <nav>
+            <div class="logo-details" >
+                <i class="fab fa-slack"></i>
+                <span class="logo_name">BH design</span>
+            </div>
+            
+            <ul class="menu">
+                <li><a href="mon projet en css.html">Accueil</a></li>
+                <li><a href="SALONS.html">Salons</a></li>
+                <li><a href="CANAPES.html">Canapés</a></li>
+                <li><a href="CHAiSES.html">Chaises</a></li>
+                <li><a href="TABLES.html">Tables</a></li>
+                <li><a href="JARDIN.html">Jardin</a></li>
+               
+            </ul>
+            </div>
+          
+        </nav>
+        <div class="search">
+           
+                <div class="search-form">
+                    
+                    <label for="search-box" class="fas fa-search"></label>
+                    <input type="search" id="search-box" placeholder="cherchez ici...">
+            </div>
+            <div class="cart-icon fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="menu-icon fas fa-bars" id="menu-btn"></div>
+        </div>
+       
+    </header>
+    <div width="100%">
+        <img src="JARDIN.webp" alt="image introuvable" width="100%" height="5">
+    </div>
+    <div class="video-container">
+        <video autoplay loop muted plays-inline width="100%" height="600" controls>
+            <source src="jardin.mp4" type="video/mp4">
+        </video>
+    </div><br>
+    
+    <div class="gallery2">
+        <div class="image-container">
+            <img src="1.webp" alt="Image 1">
+            <img src="1.1.webp" class="hover-image1">
+    <div class="réduction2">
+        <p>-20%</p>
+    </div>
+
+            <div class="overlay">
+                <p>Ajouter au panier</p>
+            </div>
+            <p id="j">CHAISE D’EXTÉRIEUR AZUR</p>
+            <p id="c"><del>2 500 DHS</del></p><br>
+            <p><b id="prix">2 000 DHS</b></p>
+  
+        </div>
+        <div class="image-container">
+            <img src="2.webp" alt="Image 2">
+            <img src="2.2.webp" class="hover-image2">
+            <div class="réduction2">
+                <p>-24%</p>
+            </div>
+            <div class="overlay">
+                <p>Ajouter au panier</p>
+            </div>
+            <p id="j">ANASTA, ALUMINIUM NOIR, 3+1+1+TB</p>
+            <p id="c"><del>24 430 DHS</del></p><br>
+            <p id="prix"><b>18 500 DHS</b></p>
+        </div>
+        <div class="image-container">
+            <img src="3.webp" alt="Image 3">
+            <img src="3.3.webp" class="hover-image3">
+            <div class="réduction2">
+                <p>-34%</p>
+            </div>
+            <div class="overlay">
+                <p>Ajouter au panier</p>
+            </div>
+            <p id="j"> HERBA, ENSEMBLE D’EXTÉRIEUR EN L, 290 X 290 CM + TB </p>
+            <p id="c"><del>39 260 DHS</del></p><br>
+            <p id="prix"><b>25 900 DHS</b></p>
+        </div>
+        <div class="image-container">
+            
+                <img src="4.webp" alt="Image 1">
+                <img src="4.4.webp" class="hover-image1">
+              
+            <div class="overlay">
+                <p>Ajouter au panier</p>
+            </div>
+            <p id="j">FAUTEUIL D’EXTÉRIEUR REKTO</p>
+         
+            <p id="prix"><b>10 000 DHS</b></p>
+        </div>
+        </div>
+    </div><br><br><br>
+
+    <div class="gallery2">
+        <div class="image-container">
+            <img src="5.webp" alt="Image 1">
+            <img src="5.5.webp" class="hover-image1">
+    <div class="réduction2">
+        <p>-23%</p>
+    </div>
+
+            <div class="overlay">
+                <p>Ajouter au panier</p>
+            </div>
+            <p id="j">AVENSIS, TRANSAT</p>
+            <p id="c"><del>5 135 DHS</del></p><br>
+            <p><b id="prix">3 950 DHS</b></p>
+  
+        </div>
+        <div class="image-container">
+            <img src="6.webp" alt="Image 2">
+            <img src="6.6.jpg" class="hover-image2">
+            <div class="réduction2">
+                <p>-20%</p>
+            </div>
+            <div class="overlay">
+                <p>Ajouter au panier</p>
+            </div>
+            <p id="j">PERLO, SALON D’EXTÉRIEUR EN L 265 X 265 CM + TB</p>
+            <p id="c"><del>37 500 DHS</del></p><br>
+            <p id="prix"><b>30 000 DHS</b></p>
+        </div>
+        <div class="image-container">
+            <img src="7.webp" alt="Image 3">
+            <img src="7.7.webp" class="hover-image3">
+            <div class="réduction2">
+                <p>-23%</p>
+            </div>
+            <div class="overlay">
+                <p>Ajouter au panier</p>
+            </div>
+            <p id="j"> CHAISE D’EXTÉRIEUR PATIO TAUPE </p>
+            <p id="c"><del>2 080 DHS</del></p><br>
+            <p id="prix"><b>1 600 DHS</b></p>
+        </div>
+        <div class="image-container">
+            
+                <img src="8.webp" alt="Image 1">
+                <img src="8.8.webp" class="hover-image1">
+                <div class="réduction2">
+                    <p>-23%</p>
+                </div>
+            <div class="overlay">
+                <p>Ajouter au panier</p>
+            </div>
+            <p id="j">BONHEUR, BED</p>
+            <p id="c"><del>17 550 DHS</del></p><br>
+            <p id="prix"><b>13 500 DHS</b></p>
+        </div>
+        </div>
+    </div><br><br><br>
+    <div class="gallery2">
+        <div class="image-container">
+            <img src="9.webp" alt="Image 1">
+            <img src="9.9.webp" class="hover-image1">
+    <div class="réduction2">
+        <p>-30%</p>
+    </div>
+
+            <div class="overlay">
+                <p>Ajouter au panier</p>
+            </div>
+            <p id="j">CAMÉLIA, ENSEMBLE DE JARDIN, 1+1+TB </p>
+            <p id="c"><del>25 070 DHS</del></p><br>
+            <p><b id="prix">17 550 DHS</b></p>
+  
+        </div>
+        <div class="image-container">
+            <img src="10.webp" alt="Image 2">
+            <img src="10.100000.webp" class="hover-image2">
+            <div class="overlay">
+                <p>Ajouter au panier</p>
+            </div>
+            <p id="j">FAUTEUIL D’EXTÉRIEUR ACACIA GRIS </p>
+            <p id="prix"><b>8 200 DHS</b></p>
+        </div>
+        <div class="image-container">
+            <img src="11.webp" alt="Image 3">
+            <img src="11.11.jpg" class="hover-image3">
+            <div class="réduction2">
+                <p>-23%</p>
+            </div>
+            <div class="overlay">
+                <p>Ajouter au panier</p>
+            </div>
+            <p id="j">MAJIK, SALON D’EXTÉRIEUR 3 + 1 + 1 + TB </p>
+            <p id="c"><del>36 140 DHS</del></p><br>
+            <p id="prix"><b>27 800 DHS</b></p>
+        </div>
+        <div class="image-container">
+            
+                <img src="12.webp" alt="Image 1">
+                <img src="12.12.webp" class="hover-image1">
+                <div class="réduction2">
+                    <p>-15%</p>
+                </div>
+            <div class="overlay">
+                <p>Ajouter au panier</p>
+            </div>
+            <p id="j">REVIRA, SALON D’EXTÉRIEUR, 250 X 250 CM + TB</p>
+            <p id="c"><del>34 000 DHS</del></p><br>
+            <p id="prix"><b>28 950 DHS</b></p>
+        </div>
+        </div>
+    </div>
+    <section id="testimonials">
+        <div class="test">
+           
+            <h2>AVIS DES CLIENTS</h2>
+        </div>
+    <div class="box-conta">
+        <div class="boxx">
+           <div class="box-top">
+               <div class="profil">
+               <div class="profil-img">
+                   <img src="img1.jpg" alt="pas">
+               </div>  
+               <div class="name-user">
+                   <strong>Karim</strong>
+                   <span>@karimbl</span>
+            
+               </div>
+            
+               <div class="reviews">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+               </div>
+           </div>
+    </div>
+    <div class="client-comment">
+       <p>"J'ai récemment acheté un salon de votre collection et je suis ravi de mon choix! La qualité du matériau est exceptionnelle, et le design apporte une touche élégante à mon salon. C'est le parfait mélange de confort et de style. Merci BH design pour ce produit de qualité!"</p>
+    </div>
+        </div>   
+           <div class="boxx">
+              <div class="box-top">
+                  <div class="profil">
+                  <div class="profil-img">
+                      <img src="image2.jpg" alt="pas">
+                  </div>  
+                  <div class="name-user">
+                      <strong>Lamiae</strong>
+                      <span>@lamiaedesign</span>
+                  </div>
+               
+                  <div class="reviews">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                  </div>
+              </div>
+       </div>
+       <div class="client-comment">
+          <p>"La table que j'ai commandée chez vous dépasse mes attentes. La finition est impeccable, et la solidité de la table est impressionnante. Elle a ajouté une note moderne à ma salle à manger. Je recommande vivement vos tables pour leur durabilité et leur esthétique."</p>
+       </div>
+           </div>   
+           <div class="box-conta">
+               <div class="boxx">
+                  <div class="box-top">
+                      <div class="profil">
+                      <div class="profil-img">
+                          <img src="image3.jpg" alt="pas">
+                      </div>  
+                      <div class="name-user">
+                          <strong>Sofia</strong>
+                          <span>@sophieak</span>
+                      </div>
+                   
+                      <div class="reviews">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                      </div>
+                  </div>
+           </div>
+           <div class="client-comment">
+              <p>"Mes nouveaux canapés de jardin sont tout simplement incroyables! Ils résistent parfaitement aux intempéries tout en étant extrêmement confortables. J'apprécie la qualité des matériaux utilisés, et ils ont transformé mon espace extérieur en une oasis de détente. Merci pour ces canapés exceptionnels!"</p>
+           </div>
+               </div>   
+             
+                   <div class="boxx">
+                      <div class="box-top">
+                          <div class="profil">
+                          <div class="profil-img">
+                              <img src="image4.jpg" alt="pas">
+                          </div>  
+                          <div class="name-user">
+                              <strong>Adam</strong>
+                              <span>@adamft</span>
+                          </div>
+                       
+                          <div class="reviews">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                          </div>
+                      </div>
+               </div>
+               <div class="client-comment">
+                  <p>"Les chaises que j'ai choisies chez vous sont à la fois élégantes et confortables. La conception ergonomique les rend idéales pour de longs dîners. La robustesse et la qualité de fabrication sont évidentes dès la première utilisation. Je suis très satisfait de mon achat et je recommande vos chaises à tous ceux qui recherchent le mariage parfait entre style et confort."</p>
+               </div>
+                   </div>   
+       </div>
+   </section><br>
+            
+    <div class="contacteznous">
+        <div class="contactus"height="2%" >
+            <div class="titre"  >
+                <h4> </u>Contactez-nous ! </u></h4>
+            </div>
+            <div class="mbox"  height="20%">
+                <div class="contact" >
+                    <form>
+                        <div class="formbox" height="20%">
+                            <div class="row50" height="20%" >
+                                <div class="inputmbox"height="20%" >
+                                    <span>First name :</span>
+                                    <input type="text" name="first" placeholder="Entrez votre prénom">
+                                </div>
+                                <div class="inputmbox" height="20%">
+                                    <span>Last name :</span>
+                                    <input type="text" name="last" placeholder="Entrez votre nom">
+                                </div>
+                            </div>
+                            <div class="row50" height="20%"  >
+                                <div class="inputmbox" height="20%">
+                                    <span>Email :</span>
+                                    <input type="email" name="email" placeholder="BHdesign2023@gmail.com">
+                                </div>
+                                <div class="inputmbox" height="20%">
+                                    <span>Mobile :</span>
+                                    <input type="phone" name="last" placeholder="+212 684-719050">
+                                </div>
+                            </div>
+                            <div class="row50" height="20%">
+                                <div class="inputmbox" height="20%">
+                                    <span>Message</span>
+                                    <textarea name="mssg" placeholder="Ecrivez votre message ici.." cols="30" rows="10"></textarea>
+                                </div>
+                            </div>
+                            <div class="row50" height="20%"> 
+                                <div class="inputmbox" height="20%">
+                                    <input type="submit" value="Envoyer">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="map">
+                    
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.1330196136014!2d-7.709395924460714!3d33.575895373340096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d4a33900f835%3A0xb540923b5bdf10fb!2sMorocco%20Mall!5e0!3m2!1sfr!2sma!4v1703872174176!5m2!1sfr!2sma" width="650" height="750" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+       
+
+    <p align="center" style="font-size:30px">RENDEZ-NOUS VISITE !</p><br>
+    <p align="center" style="color:gray; ">Chez BH Design, le design de qualité est accessible au plus grand nombre. Pas de pièces de musée, figées, mais des créations d'ameublement marocain inspirantes et surprenantes.</p>
+    <div class="gallery">
+        <div class="image-container">
+            <img src="casa.jpg" alt="Image 1">
+           
+        </div>
+        <div class="image-container">
+            <img src="rabat.jpg" alt="Image 2">
+        </div>
+        <div class="image-container">
+            <img src="tanger.jpg" alt="Image 3">
+        </div>
+        <div class="image-container">
+            <img src="kech.jpg" alt="Image 4">
+        </div><br>
+    </div>
+    <footer>
+        <div class="content">
+            <div class="top">
+                <div class="logo-details">
+                    <i class="fab fa-slack"></i>
+                    <span class="logo_name">BH design</span>
+                </div>
+                <div class="media-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+    
+            <div class="link-boxes">
+                <ul class="box">
+                    <li class="link_name">A propos</li>
+                    <li><a href="#">Nos articles</a></li>
+                    <li><a href="#">Qui sommes-nous ?</a></li>
+                    <li><a href="#">Découvrez notre histoire</a></li>
+                    <li><a href="#">Notre vision</a></li>
+                </ul>
+                <ul class="box">
+                    <li class="link_name">Expérience BH </li>
+                    <li><a href="#">CGV</a></li>
+                    <li><a href="#">LIVRAISON</a></li>
+                    <li><a href="#">RETOURS </a></li>
+                    <li><a href="#">CANDIDATURE SPONTANNEE</a></li>
+                </ul>
+                <ul class="box">
+                    <li class="link_name">Nos offres</li>
+                    <li><a href="#">Nos services</a></li>
+                    <li><a href="#">Ce que nous offrons</a></li>
+                    <li><a href="#">Parcourez nos solutions</a></li>
+                    <li><a href="#">Besoin d'Aide ?</a></li>
+                </ul>
+               
+                <ul class="box input-box">
+                    <li class="link_name">Abonnez-vous</li>
+                    <li><input type="button" value="Abonné(e)"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-details">
+            <div class="bottom_text">
+                <span class="copyright_text">Copyright &#169; 2023 <a href="#">CodingLab  </a>All rights reserved</span>
+                <span class="policy_terms">
+                    <a href="#"> Privacy policy</a>
+                    <a href="#"> Terms & condition</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+    
+    </body>
+    </html>               
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Bienvenue dans la catégorie des jardins !</p>
+</body>
+</html>
